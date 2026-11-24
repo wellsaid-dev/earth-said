@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export const GITHUB_URL = "https://github.com/earthsaid";
+export const GITHUB_URL = "https://github.com/wellsaid-dev";
 
 export const PROJECTS = [
   {
@@ -67,7 +67,7 @@ export const SOCIAL_MEDIA = [
 
   {
     label: "Instagram",
-    url: "https://www.instagram.com/earth.said?exln=bmdoOWpwMTI3dDUO",
+    url: "https://www.instagram.com/wellsaid.ma?avpt=bmdoOWpwMTI3dDU0",
     icon: FaInstagram,
   },
 ];
