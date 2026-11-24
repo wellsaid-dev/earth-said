@@ -4,11 +4,15 @@ const modules = import.meta.glob("../../topics/*.js", {
   eager: true,
 });
 
-const topics = Object.entries(modules).map(([path, module]) => ({
-  id: path.split("/").pop().replace(".js", ""),
-  path,
-  name: module.name,
-}));
+const topics = Object.entries(modules).map(([path, module]) => {
+  const topicObj = Object.values(module)[0];
+
+  return {
+    id: path.split("/").pop().replace(".js", ""),
+    path,
+    name: topicObj.name,
+  };
+});
 
 const searchTopics = (q) => {
   return topics.filter(
@@ -21,13 +25,15 @@ const searchTopics = (q) => {
 export default function TopicList({ query }) {
   const filteredTopics = query ? searchTopics(query) : topics;
 
-  console.log(filteredTopics);
-
   if (query && filteredTopics.length === 0) {
     return <p>No topic found.</p>;
   }
 
-  return filteredTopics.map((topic) => (
-    <TopicItem key={topic.id} topic={topic} />
-  ));
+  return (
+    <div className="flex flex-col gap-6">
+      {filteredTopics.map((topic) => (
+        <TopicItem key={topic.id} topic={topic} />
+      ))}
+    </div>
+  );
 }
