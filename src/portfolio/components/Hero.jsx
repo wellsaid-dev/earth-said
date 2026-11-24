@@ -4,7 +4,7 @@ import { Highlight } from "./Typography";
 import MenuToggle from "../../components/MenuToggle";
 import Menu from "../../components/Menu";
 import { House } from "lucide-react";
-import { PROSE_BLOCK_STYLE, PROSE_TEXT_STYLE } from "./index";
+import { PROSE_BLOCK_STYLE, PROSE_TEXT_STYLE } from "../../constants/index";
 
 export default function Hero({ focusEmail }) {
   const [isMenu, setIsMenu] = useState(false);

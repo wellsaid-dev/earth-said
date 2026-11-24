@@ -1,6 +1,6 @@
 import Section from "./Section";
 import { Highlight } from "./Typography";
-import { PROSE_BLOCK_STYLE, PROSE_TEXT_STYLE } from "./index";
+import { PROSE_BLOCK_STYLE, PROSE_TEXT_STYLE } from "../../constants/index";
 
 export default function WhatIcanBuild() {
   return (
